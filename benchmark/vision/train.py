@@ -144,7 +144,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     model.cuda()
 
-    if config.debug_memory_model:
+    if True or config.debug_memory_model:
         print("========== Model Only ===========")
         usage = get_memory_usage(True)
         exp_recorder.record("network", args.arch)
@@ -255,6 +255,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
         [batch_time, data_time, losses, top1, top5, ips],
         prefix="Epoch: [{}]".format(epoch))
 
+    print("==============", args.benchmark)
     if args.benchmark == "exact":
         pass
     elif args.benchmark == "gact":
@@ -273,7 +274,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
         torch.cuda.synchronize()
         start.record()
         
-        if config.debug_memory_model:
+        if True or config.debug_memory_model:
             print("========== Init Data Loader ===========")
             init_mem = get_memory_usage(True)
             exp_recorder.record("data_loader", init_mem /
@@ -283,7 +284,8 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
         output = model(images)
         loss = criterion(output, target)
 
-        if config.debug_memory_model:
+        if True or config.debug_memory_model:
+            print("========== Init Data Loader ===========")
             torch.cuda.reset_peak_memory_stats()
 
             print("========== Before Backward ===========")

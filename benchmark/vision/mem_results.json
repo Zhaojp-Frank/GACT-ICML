@@ -1,0 +1,7 @@
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.07, "batch_size": 128, "total": 10.54, "activation": 10.17}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.07, "batch_size": 128, "total": 10.54, "activation": 10.17}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.07, "batch_size": 128, "total": 10.54, "activation": 10.17}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.07, "batch_size": 128, "total": 2.59, "activation": 2.22}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.22, "batch_size": 400, "total": 7.47, "activation": 6.94}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.25, "batch_size": 448, "total": 8.32, "activation": 7.78}
+{"network": "resnet50", "algorithm": "L1", "model_only": 0.1, "data_loader": 0.26, "batch_size": 464, "total": 8.61, "activation": 8.05}

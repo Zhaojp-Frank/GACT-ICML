@@ -14,7 +14,7 @@ def alg_to_config(algorithm):
 
 
 def network_to_command(network):
-    return "python3 train.py --data ~/imagenet --arch ARCH --batch-size BS CONFIG".replace("ARCH", network)
+    return "python3 train.py --data /disk2/zhaojp/imagenet/imagenetfolder/ --arch ARCH --batch-size BS CONFIG".replace("ARCH", network)
 
 
 def run_benchmark(network, alg, batch_size, debug_mem=False, debug_speed=False, input_size=None, get_macs=False):
@@ -154,10 +154,11 @@ if __name__ == "__main__":
 
     if args.mode == 'linear_scan':
         networks = ['resnet50', 'resnet152', 'densenet201', 'wide_resnet101_2']
+        networks = ['resnet50']
         batch_sizes = list(range(32, 256, 16)) + list(range(256, 1280, 32))
         algs = ['L0', 'L1', 'L2', 'L3']
          
-        networks = ["resnet152"]
+        networks = ['resnet50']
         batch_sizes = list(range(320, 1280, 32))
         algs = ['L4bit-swap']
     else:

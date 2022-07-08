@@ -1,0 +1,16 @@
+{"network": "scaled_wide_resnet_288", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_288", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_172", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_116", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_88", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 320, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 352, "ips": -1}
+{"network": "scaled_wide_resnet_288", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_172", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "scaled_wide_resnet_116", "algorithm": "L1", "batch_size": 64, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 320, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 352, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 320, "ips": -1}
+{"network": "resnet152", "algorithm": "L4bit-swap", "batch_size": 352, "ips": -1}
+{"network": "resnet50", "algorithm": "L4bit-swap", "batch_size": 320, "ips": -1}
+{"network": "resnet50", "algorithm": "L4bit-swap", "batch_size": 352, "ips": -1}

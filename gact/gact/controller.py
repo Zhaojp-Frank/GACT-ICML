@@ -46,21 +46,31 @@ class Controller:
             del x
             return r
 
-        if torch.__version__ < torch.torch_version.Version('1.10'):
-            print("[Error] Please install PyTorch with version >= 1.10")
-        elif torch.__version__ < torch.torch_version.Version('1.11'):
+        # 
+        #if torch.__version__ < torch.torch_version.Version('1.10'):
+            #print("[Error] Please install PyTorch with version >= 1.10")
+        if torch.__version__.find('1.10') >= 0:
             torch._C._autograd._register_saved_tensors_default_hooks(
                 pack_hook, unpack_hook)
-        else:
+        elif torch.__version__.find('1.1') >= 0:
             torch._C._autograd._push_saved_tensors_default_hooks(
                 pack_hook, unpack_hook)
+        else:
+            print(torch.__version__)
+            print("[Error] Please install PyTorch with version >= 1.10 <<==")
 
     def uninstall_hook(self):
+        '''
         if torch.__version__ < torch.torch_version.Version('1.10'):
             print("[Error] Please install PyTorch with version >= 1.10")
         elif torch.__version__ < torch.torch_version.Version('1.11'):
             torch._C._autograd._reset_saved_tensors_default_hooks()
         else:
+            torch._C._autograd._pop_saved_tensors_default_hooks()
+        '''
+        if torch.__version__.find('1.10') >= 0:
+            torch._C._autograd._reset_saved_tensors_default_hooks()
+        elif torch.__version__.find('1.1') >= 0:
             torch._C._autograd._pop_saved_tensors_default_hooks()
 
     def iterate(self, get_grad):
